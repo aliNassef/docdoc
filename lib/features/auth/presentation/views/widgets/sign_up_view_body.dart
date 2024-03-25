@@ -2,15 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
-import '../../../../../core/shared/widgets/app_button.dart';
 import '../../../../../core/shared/widgets/custom_input_data.dart';
 import '../../../../../core/shared/widgets/input_phone_number.dart';
 import '../../../../../core/utils/app_colors.dart';
 import '../../../../../core/utils/app_router.dart';
 import '../../../../../core/utils/app_styles.dart';
 import '../../../logic/cubit/auth_cubit.dart';
-import '../../../logic/cubit/auth_state.dart';
 import 'have_an_account.dart';
+import 'sign_up_button.dart';
 import 'terms_and_condations.dart';
 
 class SignUpViewBody extends StatefulWidget {
@@ -94,36 +93,7 @@ class _SignUpViewBodyState extends State<SignUpViewBody> {
                 SizedBox(
                   height: 32.h,
                 ),
-                BlocConsumer<AuthCubit, AuthState>(
-                  listener: (context, state) {
-                    if (state is SignUpLoaded) {
-                      context.go(AppRouter.homeView);
-                    }
-                  },
-                  builder: (context, state) => CustomAppButton(
-                    onPressed: () {
-                      if (context
-                          .read<AuthCubit>()
-                          .formKey
-                          .currentState!
-                          .validate()) {
-                        context.read<AuthCubit>().signUp();
-                      }
-                    },
-                    title: state is SignUpLoading
-                        ? const Center(
-                            child: CircularProgressIndicator(
-                              color: Colors.white,
-                            ),
-                          )
-                        : Text(
-                            'Create Account',
-                            style: AppStyles.textStyle16SB.copyWith(
-                              color: Colors.white,
-                            ),
-                          ),
-                  ),
-                ),
+                const SignUpButton(),
                 SizedBox(
                   height: 60.h,
                 ),
