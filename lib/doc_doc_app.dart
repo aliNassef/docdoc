@@ -1,18 +1,8 @@
-import 'package:docdoc/core/cache/cache_helper.dart';
-import 'package:docdoc/core/utils/app_router.dart';
+ import 'package:docdoc/core/utils/app_router.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'core/api/service_locator.dart';
-
-void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  await CacheHelper().init();
-  setupGetIt();
-  runApp(const DocDoc());
-}
-
-class DocDoc extends StatelessWidget {
+ class DocDoc extends StatelessWidget {
   const DocDoc({super.key});
 
   @override
