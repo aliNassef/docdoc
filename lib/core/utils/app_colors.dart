@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+//#247CFF
 abstract class AppColor {
   static const kPrimaryColor = Color(0xff247CFF);
   static const kTextColor = Color(0xff757575);
