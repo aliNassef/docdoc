@@ -3,6 +3,9 @@ class EndPoint {
   static String signIn = "auth/login";
   static String signUp = "auth/register";
   static String logOut = "auth/logout";
+  static String getHomeData = 'home/index';
+  static String getAllSpecialization = 'specialization/index';
+  static String showSpecializationById = 'specialization/show/';
 }
 
 class ApiKey {

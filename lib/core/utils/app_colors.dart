@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 //#247CFF
 abstract class AppColor {
   static const kPrimaryColor = Color(0xff247CFF);
@@ -9,6 +10,4 @@ abstract class AppColor {
   static const kBorderColor = Color(0xffEDEDED);
   static const kFillColor = Color(0xffFDFDFF);
   static const kCheckBoxColor = Color(0xffA9B2B9);
-
-
 }

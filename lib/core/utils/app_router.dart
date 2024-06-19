@@ -18,7 +18,7 @@ abstract class AppRouter {
       GoRoute(
         path: '/',
         builder: (BuildContext context, GoRouterState state) {
-          return const OnBoarding();
+          return const OnBoardingView();
         },
       ),
       GoRoute(

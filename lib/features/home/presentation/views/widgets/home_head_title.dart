@@ -5,7 +5,8 @@ import '../../../../../core/utils/app_styles.dart';
 
 class HomeHeadTitle extends StatelessWidget {
   const HomeHeadTitle({
-    super.key, required this.title,
+    super.key,
+    required this.title,
   });
   final String title;
 
@@ -14,7 +15,7 @@ class HomeHeadTitle extends StatelessWidget {
     return Row(
       children: [
         Text(
-        title,
+          title,
           style: AppStyles.textStyle18SB.copyWith(
             color: AppColor.kTermsColor2,
           ),

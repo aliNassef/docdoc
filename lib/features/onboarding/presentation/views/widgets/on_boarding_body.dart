@@ -9,8 +9,8 @@ import '../../../../../core/utils/app_router.dart';
 import '../../../../../core/utils/app_styles.dart';
 import 'custom_onboarding_image.dart';
 
-class OnBoardingBody extends StatelessWidget {
-  const OnBoardingBody({
+class OnBoardingViewBody extends StatelessWidget {
+  const OnBoardingViewBody({
     super.key,
   });
 

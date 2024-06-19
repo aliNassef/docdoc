@@ -1,3 +1,6 @@
+import 'package:docdoc/core/api/end_ponits.dart';
+import 'package:docdoc/core/api/service_locator.dart';
+import 'package:docdoc/core/cache/cache_helper.dart';
 import 'package:docdoc/features/auth/data/repo/auth_repo.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -19,13 +22,21 @@ class AuthCubit extends Cubit<AuthState> {
       email: signInEmail.text,
       pass: signInPass.text,
     );
-    debugPrint(signInEmail.text);
-    debugPrint(signInPass.text);
     data.fold(
-      (l) => emit(SignInLoaded()),
-      (r) => emit(SignInFailure(
-        errMessage: r,
-      )),
+      (l) {
+        emit(SignInLoaded());
+        getIt.get<CacheHelper>().saveData(
+              key: ApiKey.token,
+              value: l.data!.token!,
+            );
+      },
+      (r) {
+        emit(
+          SignInFailure(
+            errMessage: r,
+          ),
+        );
+      },
     );
   }
 
@@ -43,11 +54,18 @@ class AuthCubit extends Cubit<AuthState> {
       passCon: signUpPass.text,
       phone: signUpPhone.text,
     );
-    debugPrint(signUpEmail.text);
-    debugPrint(signUpPass.text);
+
     data.fold(
-      (l) => emit(SignUpLoaded()),
-      (r) => emit(SignUpFailure()),
+      (l) {
+        emit(SignUpLoaded());
+        getIt.get<CacheHelper>().saveData(
+              key: ApiKey.token,
+              value: l.data!.token!,
+            );
+      },
+      (r) {
+        emit(SignUpFailure());
+      },
     );
   }
 }

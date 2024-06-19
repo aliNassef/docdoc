@@ -7,7 +7,7 @@ import '../../../../../core/shared/widgets/input_phone_number.dart';
 import '../../../../../core/utils/app_colors.dart';
 import '../../../../../core/utils/app_router.dart';
 import '../../../../../core/utils/app_styles.dart';
-import '../../../logic/aith_cubit/auth_cubit.dart';
+import '../../../logic/auth_cubit/auth_cubit.dart';
 import 'have_an_account.dart';
 import 'sign_up_button.dart';
 import 'terms_and_condations.dart';

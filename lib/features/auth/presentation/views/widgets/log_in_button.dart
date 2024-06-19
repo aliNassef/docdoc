@@ -5,8 +5,8 @@ import 'package:go_router/go_router.dart';
 import '../../../../../core/shared/widgets/app_button.dart';
 import '../../../../../core/utils/app_router.dart';
 import '../../../../../core/utils/app_styles.dart';
-import '../../../logic/aith_cubit/auth_cubit.dart';
-import '../../../logic/aith_cubit/auth_state.dart';
+import '../../../logic/auth_cubit/auth_cubit.dart';
+import '../../../logic/auth_cubit/auth_state.dart';
 
 class LogInButton extends StatelessWidget {
   const LogInButton({

@@ -26,7 +26,7 @@ abstract class AppStyles {
     fontWeight: FontWeight.w400,
     fontSize: 12.sp,
   );
-    static final textStyle12M = TextStyle(
+  static final textStyle12M = TextStyle(
     fontWeight: FontWeight.w500,
     fontSize: 12.sp,
   );

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../utils/app_colors.dart';
- 
+
 class CustomAppButton extends StatelessWidget {
   const CustomAppButton({
     super.key,
